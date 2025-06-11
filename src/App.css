@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,40 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+.main {
+  padding: 20px;
 }
+
+.modal__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__input {
+  font-weight: 100;
+  box-sizing: border-box;
+  border: 1px solid rgba(225, 231, 237, 1);
+  border-radius: 4px;
+  color: #3d4e61;
+  padding-block: 4px;
+  padding-inline: 10px;
+  font-size: 16px;
+  line-height: 100%;
+  width: 70%;
+}
+
+.modal__select {
+  font-weight: 100;
+  box-sizing: border-box;
+  border: 1px solid rgba(225, 231, 237, 1);
+  border-radius: 4px;
+  color: #3d4e61;
+  padding-block: 4px;
+  padding-inline: 10px;
+  font-size: 16px;
+  line-height: 100%;
+  width: 30%;
+}
+
