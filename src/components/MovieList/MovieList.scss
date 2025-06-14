@@ -1,17 +1,21 @@
 
 .movie-list {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr)); /* grid-cols-1 */
-  gap: 1rem; /* gap-4 */
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  row-gap: 30px;
+  align-items: stretch;
+  justify-content: center;
 
-  /* Responsive grid columns */
-  @media (min-width: 640px) { /* sm breakpoint */
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* sm:grid-cols-2 */
+  @media (min-width: 640px) { 
+    grid-template-columns: repeat(2, minmax(0, 300px));
+    column-gap: 50px;
   }
-  @media (min-width: 768px) { /* md breakpoint */
-    grid-template-columns: repeat(3, minmax(0, 1fr)); /* md:grid-cols-3 */
+  @media (min-width: 768px) {
+    grid-template-columns:  repeat(3, minmax(0, 300px));
+    column-gap: 50px;
   }
-  @media (min-width: 1024px) { /* lg breakpoint */
-    grid-template-columns: repeat(4, minmax(0, 1fr)); /* lg:grid-cols-4 */
+  @media (min-width: 1024px) { 
+    grid-template-columns: repeat(4, minmax(0, 300px)); 
+    column-gap: 50px;
   }
 }

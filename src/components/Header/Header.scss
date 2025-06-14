@@ -8,8 +8,14 @@
 
   padding-inline: 20px;
 
+  font-family: 'Poppins', sans-serif;
+
   &__title {
     color: rgba(255, 255, 255, 1);
+  }
+
+  &__plus {
+    cursor: pointer;
   }
 }
 

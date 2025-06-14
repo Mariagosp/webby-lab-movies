@@ -1,0 +1,16 @@
+.main {
+  padding: 20px;
+  background-color: #12151c;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+
+  &__empty-title {
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+  }
+}

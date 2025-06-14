@@ -1,0 +1,77 @@
+.movie__info {
+  &--modal {
+    padding: 2rem;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(to right, #fff, #f8f9fa);
+    border-radius: 12px;
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  &--title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &--grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+
+    &--grid {
+      font-weight: 600;
+    }
+  }
+
+  &--actors {
+    &--title {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &--list {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 10px;
+
+      &--item {
+        margin-bottom: 0.3rem;
+        font-size: 1rem;
+        background-color: #f1f3f5;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.03);
+          background-color: #e9ecef;
+        }
+      }
+    }
+  }
+
+  &--delete-button {
+    background: #f44336;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

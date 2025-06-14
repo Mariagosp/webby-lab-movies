@@ -1,8 +1,9 @@
 import "./Header.scss";
 import { Input } from "../Input/Input";
-import { ArrowUp } from "../icons/ArrowUp";
-import { ArrowDown } from "../icons/ArrowDown";
-import { Close } from "../icons/Close";
+import ArrowUp from '../../assets/arrowUp.svg?react'
+import ArrowDown from "../../assets/arrowDown.svg?react";
+import Close  from "../../assets/close.svg?react";
+import Plus from '../../assets/plus.svg?react'
 
 type Props = {
   query: string;
@@ -36,7 +37,6 @@ export const Header: React.FC<Props> = ({
     <>
       <header className="header">
         <h2 className="header__title">MoviesList</h2>
-        {/* <img src="../../assets/plus.svg" alt="" className='plus' /> */}
         <div className="container">
           {sortBy === null ? (
             <ArrowUp onClick={() => handleSortClick(null)} />
@@ -46,7 +46,7 @@ export const Header: React.FC<Props> = ({
             <Close color="white" onClick={() => handleSortClick('desc')} />
           )}
 
-          <button className="plus" title="Want to add a movie?" onClick={onOpenModalClick}></button>
+          <Plus onClick={onOpenModalClick} className="header__plus" />
           <Input
             query={query}
             handleSetInput={handleSetInput}
@@ -58,11 +58,3 @@ export const Header: React.FC<Props> = ({
     </>
   );
 };
-
-// const newMovie = {
-//   title: query,
-//   releaseYear: 2014,
-//   format: 'DVD',
-//   actores: ['Jennifer Aniston'],
-// }
-// dispatch(addMovie(newMovie))

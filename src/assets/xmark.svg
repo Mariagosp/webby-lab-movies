@@ -1,0 +1,27 @@
+<svg
+  width="30"
+  height="30"
+  viewBox="0 0 60 60"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle cx="30" cy="30" r="28" stroke="#f56565" strokeWidth="4" />
+  <line
+    x1="20"
+    y1="20"
+    x2="40"
+    y2="40"
+    stroke="#f56565"
+    strokeWidth="4"
+    strokeLinecap="round"
+  />
+  <line
+    x1="40"
+    y1="20"
+    x2="20"
+    y2="40"
+    stroke="#f56565"
+    strokeWidth="4"
+    strokeLinecap="round"
+  />
+</svg>

@@ -1,5 +1,7 @@
-import { Close } from "../icons/Close";
+// import { Close } from "../icons/Close";
 import "./Input.scss";
+import Close from '../../assets/close.svg?react'
+import Search from '../../assets/Search.svg?react'
 
 type Props = {
   query: string;
@@ -17,16 +19,16 @@ export const Input: React.FC<Props> = ({
   return (
     <>
       <form className="form" onSubmit={handleSubmit}>
-        <div className="icon"></div>
+        <Search className="form__icon"/>
         <input
           type="text"
           placeholder="Search"
-          className="input"
+          className="form__input"
           value={query}
           onChange={(e) => handleSetInput(e.target.value)}
         />
-        <div className="close" onClick={handleClearQuery}>
-          <Close viewBoxSize={19} />
+        <div className="form__close" onClick={handleClearQuery}>
+          <Close />
         </div>
       </form>
     </>

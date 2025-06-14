@@ -1,9 +1,9 @@
-import type { MovieType } from "../../types/MovieType";
+import type { MovieWithIcon } from "../../types/MovieType";
 import { MovieCard } from "../MovieCard/MovieCard";
 import './MovieList.scss';
 
 type Props = {
-  movies: MovieType[];
+  movies: MovieWithIcon[];
 }
 
 export const MovieList: React.FC<Props> = ({ movies }) => {

@@ -9,11 +9,11 @@ export const movieSchema = yup.object({
     .required("Enter release year"),
   format: yup
     .string()
-    .oneOf(["VHS", "DVD", "Blu-ray"], "Choose a valid format")
+    .oneOf(["VHS", "DVD", "Blu-Ray"], "Choose a valid format")
     .required("Select a format"),
   actors: yup
-    .array()
-    .of(yup.string())
-    .min(1, "Add at least one actor")
-    .required("Add at least one actor"),
+  .array()
+  .of(yup.string().required("Actor cannot be empty")) 
+  .min(1, "Add at least one actor")
+  .required("Add at least one actor"),
 });
