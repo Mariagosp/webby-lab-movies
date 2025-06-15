@@ -64,8 +64,6 @@ function App() {
       <main className="main">
         {isLoading ? (
           <Loader />
-        ) : error ? (
-          <h3>{error}</h3>
         ) : movies.length === 0 ? (
           <h3 className="main__empty-title">No movies found... Yet :)</h3>
         ) : (
