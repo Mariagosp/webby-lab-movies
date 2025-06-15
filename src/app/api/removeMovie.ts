@@ -13,7 +13,7 @@ export const removeMovieThunk = createAsyncThunk(
           Authorization: `${AUTH_TOKEN}`,
         },
       });
-      console.log('remove', response.data);
+
       return response.data; 
     } catch (error) {
       console.error("Failed to remove movie:", error);

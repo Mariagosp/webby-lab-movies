@@ -1,4 +1,3 @@
-// import { Close } from "../icons/Close";
 import "./Input.scss";
 import Close from '../../assets/close.svg?react'
 import Search from '../../assets/Search.svg?react'

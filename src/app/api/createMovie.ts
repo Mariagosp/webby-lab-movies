@@ -29,8 +29,6 @@ export const createMovie = createAsyncThunk<
       },
     });
 
-    console.log('response.data.data', response.data)
-
     return response.data.data; 
   } catch (err: any) {
     console.error("Ошибка при создании фильма:", err);

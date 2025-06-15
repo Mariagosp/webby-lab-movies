@@ -1,6 +1,5 @@
-// src/components/Modal/Modal.jsx
 import React from "react";
-import ReactDOM from "react-dom"; // Импортируем ReactDOM
+import ReactDOM from "react-dom"; 
 import "./Modal.scss";
 
 type Props = {

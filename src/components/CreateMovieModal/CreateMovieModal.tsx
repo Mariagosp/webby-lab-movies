@@ -90,8 +90,6 @@ export const CreateMovieModal: FC<Props> = ({ closeModal }) => {
         actors: data.actors,
       };
 
-      console.log("dataToSend", dataToSend);
-
       await dispatch(createMovie(dataToSend)).unwrap();
 
       reset();

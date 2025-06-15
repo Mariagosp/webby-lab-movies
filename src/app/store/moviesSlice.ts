@@ -13,7 +13,6 @@ import { getRandomIcon } from "../../utils/getRandomIcon";
 export type MoviesState = {
   movies: MovieWithIcon[];
   moviesWithDetails: MovieWithDetails[];
-  moviesList: string[];
   isLoading: boolean;
   error: string;
 };
@@ -21,7 +20,6 @@ export type MoviesState = {
 export const initialState: MoviesState = {
   movies: [] as MovieWithIcon[],
   moviesWithDetails: [] as MovieWithDetails[],
-  moviesList: [] as string[],
   isLoading: false,
   error: "",
 };
@@ -43,10 +41,6 @@ export const moviesSlice = createSlice({
       state.movies = state.movies.filter(
         (movie) => movie.id !== action.payload
       );
-    },
-
-    addNewMovie: (state, action: PayloadAction<string>) => {
-      state.moviesList.push(action.payload);
     },
   },
   extraReducers: (builder) => {
@@ -78,7 +72,6 @@ export const moviesSlice = createSlice({
         state.error = "";
       })
       .addCase(createMovie.fulfilled, (state, action) => {
-        console.log("action.payload", action.payload);
         state.isLoading = false;
         const newMovie = {
           id: action.payload.id,
@@ -87,7 +80,7 @@ export const moviesSlice = createSlice({
           format: action.payload.format,
           icon: getRandomIcon(),
         };
-        console.log("newMovie", newMovie);
+
         state.movies.push(newMovie);
       })
       .addCase(createMovie.rejected, (state, action) => {
@@ -114,6 +107,6 @@ export const moviesSlice = createSlice({
   },
 });
 
-export const { addMovie, deleteMovie, addNewMovie } =
+export const { addMovie, deleteMovie } =
   moviesSlice.actions;
 export default moviesSlice.reducer;

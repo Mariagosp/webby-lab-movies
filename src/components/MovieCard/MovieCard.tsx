@@ -20,7 +20,7 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
   const openModal = async () => {
     try {
       const movieDetails = await getMovieById(movie.id);
-      console.log('movieDetails', movieDetails.data)
+
       setSelectedMovie(movieDetails.data);
       setIsModalOpen(true)
     } catch (error) {
