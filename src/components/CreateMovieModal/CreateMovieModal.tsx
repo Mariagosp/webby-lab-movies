@@ -101,7 +101,6 @@ export const CreateMovieModal: FC<Props> = ({ closeModal }) => {
     } catch (err) {
       toast.error(`Error while creating a movie
         Please make sure you entered everything correctly`);
-      closeModal()
     }
   };
 
