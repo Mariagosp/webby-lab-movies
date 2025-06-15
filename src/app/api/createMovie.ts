@@ -1,8 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import type { MovieWithDetails } from "../../types/MovieType";
+import { API_URL } from "../../shared/config";
 
-const API_URL = import.meta.env.VITE_API_URL;
 const AUTH_TOKEN = import.meta.env.VITE_AUTH_TOKEN;
 
 type CreateMoviePayload = {

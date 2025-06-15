@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { mapResponseToMovieType } from "../../utils/mapResponseToMovieType";
+import { API_URL } from "../../shared/config";
 
 export type ResponseMovieType = {
   id: number;
@@ -11,7 +12,6 @@ export type ResponseMovieType = {
   updatedAt: string;
 };
 
-const API_URL = import.meta.env.VITE_API_URL;
 const AUTH_TOKEN = import.meta.env.VITE_AUTH_TOKEN;
 
 export const fetchMovies = createAsyncThunk(
