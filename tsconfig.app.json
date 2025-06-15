@@ -20,6 +20,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "outDir": "dist",
+    "rootDir": "./src"
   },
   "include": ["src"]
 }
